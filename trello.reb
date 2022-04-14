@@ -69,8 +69,10 @@ js-do/local {
         //
         // Callback after the card has loaded
         // Can be used to resize the parent container
+        // Trello example used evt.path[0] but that is non-standard
+        // https://stackoverflow.com/a/39245638
         //
-        var iframe = evt.path[0];
+        var iframe = evt.composedPath()[0];
         let el = document.getElementById("trello-card")
         el.style.height = iframe.clientHeight;
         el.style.width = iframe.clientWidth;
