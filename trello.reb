@@ -72,17 +72,17 @@ js-do/local {
         // Trello example used evt.path[0] but that is non-standard
         // https://stackoverflow.com/a/39245638
         //
-        var iframe = evt.composedPath()[0];
+        var iframe = evt.composedPath()[0]
         let el = document.getElementById("trello-card")
-        el.style.height = iframe.clientHeight;
-        el.style.width = iframe.clientWidth;
+        el.style.height = iframe.clientHeight
+        el.style.width = iframe.clientWidth
       },
       onResize: function(dim) {
         // Callback after the card resizes when the comments
         // section is expanded or collapsed
         //
         let el = document.getElementById("trello-card")
-        el.style.height = dim.height;
+        el.style.height = dim.height
       }
     })
 }
